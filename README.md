@@ -104,6 +104,6 @@ This is the 'Assignment 2 for the course 'Experimental Robotics'.
 
 #####   go_to_goal():
         This function generates the velocity commands to move the robot to the coordinate received in the parameter.
-	      While the robot is not aligned to the Goal the robot keeps rotating. Once the robot is aligned to the goal, linear velocity commands are generated in that direction until it reaches the goal within some threshold.
-      	This function also keeps checking the parameter "detectBallFlag", and if this parameter is 1 and the robot is in the NORMAL state, the function stops, because this means that now the robot is not required to go to the given coordinate, and the robot just needs to switch to the PLAY state and follow the ball.
+	While the robot is not aligned to the Goal the robot keeps rotating. Once the robot is aligned to the goal, linear velocity commands are generated in that direction until it reaches the goal within some threshold.
+	This function also keeps checking the parameter "detectBallFlag", and if this parameter is 1 and the robot is in the NORMAL state, the function stops, because this means that now the robot is not required to go to the given coordinate, and the robot just needs to switch to the PLAY state and follow the ball.
 
