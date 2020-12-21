@@ -6,7 +6,11 @@ This is the 'Assignment 2 for the course 'Experimental Robotics'.
 
 #### How to Run:
 
-    Go to the 'Master' branch and Clone the repository into the src folder of your ROS workspace
+    Go to the 'Master' branch and Clone the repository
+    
+    Copy the 'exp_assignment2' folder into the src folder of your ROS workspace
+    
+    Open the terminal and run 'catkin_make' inside your ROS workspace
     
     Open the Terminal and go to the 'Scripts' folder of this package
 
@@ -19,6 +23,8 @@ This is the 'Assignment 2 for the course 'Experimental Robotics'.
 **************************    
 
 #### Gazebo Models:
+
+The models used were defined in the XACRO and URDF formats.
 
 ##### Robot Model:
 
