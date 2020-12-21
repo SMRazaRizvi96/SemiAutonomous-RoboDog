@@ -1,0 +1,82 @@
+\section{assignment2.\+Normal Class Reference}
+\label{classassignment2_1_1_normal}\index{assignment2.\+Normal@{assignment2.\+Normal}}
+
+
+Inherits State.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \textbf{ \+\_\+\+\_\+init\+\_\+\+\_\+} (self)
+\item 
+def \textbf{ execute} (self, userdata)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ goal} = Point()
+\item 
+\textbf{ i} = random.\+randint(1,5)
+\item 
+\textbf{ x}
+\item 
+\textbf{ y}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}In NORMAL state a random number times (from 1 to 5) random coordinates were generated within the area.
+These coordinates were then passed to the go_to_goal() function, which takes care of moving the robot to the generated random coordinate. 
+This function also checks on the parameter "detectBall Flag", if the flag is 1, this means that the ball was detected, and then it transitions to the PLAY state.
+If no ball was detected, it then transitions to the SLEEP state after completing this behavior.
+\end{DoxyVerb}
+ 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{classassignment2_1_1_normal_a0de5fe49746b8b912c3fb808bfa2474a}} 
+\index{assignment2\+::\+Normal@{assignment2\+::\+Normal}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!assignment2\+::\+Normal@{assignment2\+::\+Normal}}
+\subsubsection{\+\_\+\+\_\+init\+\_\+\+\_\+()}
+{\footnotesize\ttfamily def assignment2.\+Normal.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\label{classassignment2_1_1_normal_a72ffa30dee7cf3ffa51028cdda13a8c5}} 
+\index{assignment2\+::\+Normal@{assignment2\+::\+Normal}!execute@{execute}}
+\index{execute@{execute}!assignment2\+::\+Normal@{assignment2\+::\+Normal}}
+\subsubsection{execute()}
+{\footnotesize\ttfamily def assignment2.\+Normal.\+execute (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{userdata }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\label{classassignment2_1_1_normal_a670f69e0f38df894921acc23e44825e4}} 
+\index{assignment2\+::\+Normal@{assignment2\+::\+Normal}!goal@{goal}}
+\index{goal@{goal}!assignment2\+::\+Normal@{assignment2\+::\+Normal}}
+\subsubsection{goal}
+{\footnotesize\ttfamily assignment2.\+Normal.\+goal = Point()\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\label{classassignment2_1_1_normal_a944baa609f264c2642192a6657c25444}} 
+\index{assignment2\+::\+Normal@{assignment2\+::\+Normal}!i@{i}}
+\index{i@{i}!assignment2\+::\+Normal@{assignment2\+::\+Normal}}
+\subsubsection{i}
+{\footnotesize\ttfamily assignment2.\+Normal.\+i = random.\+randint(1,5)\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\label{classassignment2_1_1_normal_a4c1784506528b3a3cd59f91d5e99dc8e}} 
+\index{assignment2\+::\+Normal@{assignment2\+::\+Normal}!x@{x}}
+\index{x@{x}!assignment2\+::\+Normal@{assignment2\+::\+Normal}}
+\subsubsection{x}
+{\footnotesize\ttfamily assignment2.\+Normal.\+x\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\label{classassignment2_1_1_normal_a1e84591bcc008cc1676995bc9bf15004}} 
+\index{assignment2\+::\+Normal@{assignment2\+::\+Normal}!y@{y}}
+\index{y@{y}!assignment2\+::\+Normal@{assignment2\+::\+Normal}}
+\subsubsection{y}
+{\footnotesize\ttfamily assignment2.\+Normal.\+y\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+scripts/\textbf{ assignment2.\+py}\end{DoxyCompactItemize}

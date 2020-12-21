@@ -1,0 +1,82 @@
+\section{assignment2 Namespace Reference}
+\label{namespaceassignment2}\index{assignment2@{assignment2}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \textbf{ Normal}
+\item 
+class \textbf{ Play}
+\item 
+class \textbf{ Sleep}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \textbf{ detect\+Ball} (image)
+\item 
+def \textbf{ go\+\_\+to\+\_\+goal} (goal)
+\item 
+def \textbf{ new\+Odom} (current\+Pos)
+\item 
+def \textbf{ main} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+bool \textbf{ V\+E\+R\+B\+O\+SE} = False
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\label{namespaceassignment2_a7d16703cc3805820e2ca219ca80b60e4}} 
+\index{assignment2@{assignment2}!detect\+Ball@{detect\+Ball}}
+\index{detect\+Ball@{detect\+Ball}!assignment2@{assignment2}}
+\subsubsection{detect\+Ball()}
+{\footnotesize\ttfamily def assignment2.\+detect\+Ball (\begin{DoxyParamCaption}\item[{}]{image }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This function is the callback of the Camera Image topic.
+This function uses Open CV to process the image received, and detects the contours of Green ball in that image.
+If any contour is found, it turns the Parameter "detectBallFlag" to 1, otherwise turns it to 0.
+\end{DoxyVerb}
+ \mbox{\label{namespaceassignment2_a10d502639844e6a3b88feddbc1f0ecfc}} 
+\index{assignment2@{assignment2}!go\+\_\+to\+\_\+goal@{go\+\_\+to\+\_\+goal}}
+\index{go\+\_\+to\+\_\+goal@{go\+\_\+to\+\_\+goal}!assignment2@{assignment2}}
+\subsubsection{go\+\_\+to\+\_\+goal()}
+{\footnotesize\ttfamily def assignment2.\+go\+\_\+to\+\_\+goal (\begin{DoxyParamCaption}\item[{}]{goal }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This function generates the velocity commands to move the robot to the coordinate received in the parameter.
+While the robot is not aligned to the Goal the robot keeps rotating. Once the robot is aligned to the goal, linear velocity commands are generated in that direction until it reaches the goal under some threshold.
+This function also keeps checking the parameter "detectBallFlag", and if this parameter is 1 and the robot is in the NORMAL state, the function stops, because this means that now the robot is not required to go to the given coordinate, and the robot just needs to follow the ball, and the function is no longer needed.
+\end{DoxyVerb}
+ \mbox{\label{namespaceassignment2_a9c06d83f39167c8a1eb1f19cfadc4930}} 
+\index{assignment2@{assignment2}!main@{main}}
+\index{main@{main}!assignment2@{assignment2}}
+\subsubsection{main()}
+{\footnotesize\ttfamily def assignment2.\+main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This is a State Machine for a Robot Dog name wheely.
+The main function initializes the ros node, subscribes to the topic: robot's odometry topic ("/robot/odom")
+and the robot's camera image topic ("/robot/camera1/image_raw/compressed"), and creates a publisher for the robot's velocity commands on the topic "/robot/cmd_vel".
+
+This function also intializes the "detectBallFlag" and "state" parameters in the ROS Parameter Server.
+
+This function also defines the state machines and adds three states/behaviors to the container.
+\end{DoxyVerb}
+ \mbox{\label{namespaceassignment2_a201aa32e90338713eeb36c5cce3d128f}} 
+\index{assignment2@{assignment2}!new\+Odom@{new\+Odom}}
+\index{new\+Odom@{new\+Odom}!assignment2@{assignment2}}
+\subsubsection{new\+Odom()}
+{\footnotesize\ttfamily def assignment2.\+new\+Odom (\begin{DoxyParamCaption}\item[{}]{current\+Pos }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This function is a callback for the robot's odometry topic "/robot/odom".
+This function extract the x,y coordinate of the Robot, and also uses the quaternion orientation to compute the Euler orientation 'Theta' of the Robot with respect to the world_frame.
+\end{DoxyVerb}
+ 
+
+\subsection{Variable Documentation}
+\mbox{\label{namespaceassignment2_aa828aa1b9cc2faaed121fa44161cae60}} 
+\index{assignment2@{assignment2}!V\+E\+R\+B\+O\+SE@{V\+E\+R\+B\+O\+SE}}
+\index{V\+E\+R\+B\+O\+SE@{V\+E\+R\+B\+O\+SE}!assignment2@{assignment2}}
+\subsubsection{V\+E\+R\+B\+O\+SE}
+{\footnotesize\ttfamily bool assignment2.\+V\+E\+R\+B\+O\+SE = False}
+

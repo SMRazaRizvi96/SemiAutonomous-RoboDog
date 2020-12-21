@@ -1,0 +1,198 @@
+\section{go\+\_\+to\+\_\+point\+\_\+ball Namespace Reference}
+\label{namespacego__to__point__ball}\index{go\+\_\+to\+\_\+point\+\_\+ball@{go\+\_\+to\+\_\+point\+\_\+ball}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \textbf{ clbk\+\_\+odom} (msg)
+\item 
+def \textbf{ change\+\_\+state} (state)
+\item 
+def \textbf{ go\+\_\+straight\+\_\+ahead} (des\+\_\+pos)
+\item 
+def \textbf{ done} ()
+\item 
+def \textbf{ planning} (goal)
+\item 
+def \textbf{ main} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ position\+\_\+} = Point()
+\item 
+\textbf{ pose\+\_\+} = Pose()
+\item 
+int \textbf{ yaw\+\_\+} = 0
+\item 
+int \textbf{ state\+\_\+} = 0
+\item 
+\textbf{ desired\+\_\+position\+\_\+} = Point()
+\item 
+int \textbf{ yaw\+\_\+precision\+\_\+} = math.\+pi / 9
+\item 
+int \textbf{ yaw\+\_\+precision\+\_\+2\+\_\+} = math.\+pi / 90
+\item 
+float \textbf{ dist\+\_\+precision\+\_\+} = 0.\+1
+\item 
+float \textbf{ kp\+\_\+a} = 3.\+0
+\item 
+float \textbf{ kp\+\_\+d} = 0.\+5
+\item 
+float \textbf{ ub\+\_\+a} = 0.\+6
+\item 
+float \textbf{ lb\+\_\+a} = -\/0.\+5
+\item 
+float \textbf{ ub\+\_\+d} = 2.\+0
+\item 
+float \textbf{ z\+\_\+back} = 0.\+25
+\item 
+\textbf{ pub} = None
+\item 
+\textbf{ pubz} = None
+\item 
+\textbf{ act\+\_\+s} = None
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\label{namespacego__to__point__ball_ac5839fd3601d15749a1e1a28939b2c68}} 
+\index{go\+\_\+to\+\_\+point\+\_\+ball@{go\+\_\+to\+\_\+point\+\_\+ball}!change\+\_\+state@{change\+\_\+state}}
+\index{change\+\_\+state@{change\+\_\+state}!go\+\_\+to\+\_\+point\+\_\+ball@{go\+\_\+to\+\_\+point\+\_\+ball}}
+\subsubsection{change\+\_\+state()}
+{\footnotesize\ttfamily def go\+\_\+to\+\_\+point\+\_\+ball.\+change\+\_\+state (\begin{DoxyParamCaption}\item[{}]{state }\end{DoxyParamCaption})}
+
+\mbox{\label{namespacego__to__point__ball_a8b53c165c87e66822f50ab5daebc14dc}} 
+\index{go\+\_\+to\+\_\+point\+\_\+ball@{go\+\_\+to\+\_\+point\+\_\+ball}!clbk\+\_\+odom@{clbk\+\_\+odom}}
+\index{clbk\+\_\+odom@{clbk\+\_\+odom}!go\+\_\+to\+\_\+point\+\_\+ball@{go\+\_\+to\+\_\+point\+\_\+ball}}
+\subsubsection{clbk\+\_\+odom()}
+{\footnotesize\ttfamily def go\+\_\+to\+\_\+point\+\_\+ball.\+clbk\+\_\+odom (\begin{DoxyParamCaption}\item[{}]{msg }\end{DoxyParamCaption})}
+
+\mbox{\label{namespacego__to__point__ball_ab92c8b4240f09ff0b5d960c748ade799}} 
+\index{go\+\_\+to\+\_\+point\+\_\+ball@{go\+\_\+to\+\_\+point\+\_\+ball}!done@{done}}
+\index{done@{done}!go\+\_\+to\+\_\+point\+\_\+ball@{go\+\_\+to\+\_\+point\+\_\+ball}}
+\subsubsection{done()}
+{\footnotesize\ttfamily def go\+\_\+to\+\_\+point\+\_\+ball.\+done (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\label{namespacego__to__point__ball_aecbf76a67251ff6a3a0840bb61e1c581}} 
+\index{go\+\_\+to\+\_\+point\+\_\+ball@{go\+\_\+to\+\_\+point\+\_\+ball}!go\+\_\+straight\+\_\+ahead@{go\+\_\+straight\+\_\+ahead}}
+\index{go\+\_\+straight\+\_\+ahead@{go\+\_\+straight\+\_\+ahead}!go\+\_\+to\+\_\+point\+\_\+ball@{go\+\_\+to\+\_\+point\+\_\+ball}}
+\subsubsection{go\+\_\+straight\+\_\+ahead()}
+{\footnotesize\ttfamily def go\+\_\+to\+\_\+point\+\_\+ball.\+go\+\_\+straight\+\_\+ahead (\begin{DoxyParamCaption}\item[{}]{des\+\_\+pos }\end{DoxyParamCaption})}
+
+\mbox{\label{namespacego__to__point__ball_a4d4c016b6bb12c612710a2d39ade3465}} 
+\index{go\+\_\+to\+\_\+point\+\_\+ball@{go\+\_\+to\+\_\+point\+\_\+ball}!main@{main}}
+\index{main@{main}!go\+\_\+to\+\_\+point\+\_\+ball@{go\+\_\+to\+\_\+point\+\_\+ball}}
+\subsubsection{main()}
+{\footnotesize\ttfamily def go\+\_\+to\+\_\+point\+\_\+ball.\+main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\label{namespacego__to__point__ball_ab0e05a6be4adc81f80b5635d9bd692d1}} 
+\index{go\+\_\+to\+\_\+point\+\_\+ball@{go\+\_\+to\+\_\+point\+\_\+ball}!planning@{planning}}
+\index{planning@{planning}!go\+\_\+to\+\_\+point\+\_\+ball@{go\+\_\+to\+\_\+point\+\_\+ball}}
+\subsubsection{planning()}
+{\footnotesize\ttfamily def go\+\_\+to\+\_\+point\+\_\+ball.\+planning (\begin{DoxyParamCaption}\item[{}]{goal }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\label{namespacego__to__point__ball_a9ac8c67ea55b320e5eb2bdf665173ffa}} 
+\index{go\+\_\+to\+\_\+point\+\_\+ball@{go\+\_\+to\+\_\+point\+\_\+ball}!act\+\_\+s@{act\+\_\+s}}
+\index{act\+\_\+s@{act\+\_\+s}!go\+\_\+to\+\_\+point\+\_\+ball@{go\+\_\+to\+\_\+point\+\_\+ball}}
+\subsubsection{act\+\_\+s}
+{\footnotesize\ttfamily go\+\_\+to\+\_\+point\+\_\+ball.\+act\+\_\+s = None}
+
+\mbox{\label{namespacego__to__point__ball_ac81a8393fb253c9e0b7255f779f16884}} 
+\index{go\+\_\+to\+\_\+point\+\_\+ball@{go\+\_\+to\+\_\+point\+\_\+ball}!desired\+\_\+position\+\_\+@{desired\+\_\+position\+\_\+}}
+\index{desired\+\_\+position\+\_\+@{desired\+\_\+position\+\_\+}!go\+\_\+to\+\_\+point\+\_\+ball@{go\+\_\+to\+\_\+point\+\_\+ball}}
+\subsubsection{desired\+\_\+position\+\_\+}
+{\footnotesize\ttfamily go\+\_\+to\+\_\+point\+\_\+ball.\+desired\+\_\+position\+\_\+ = Point()}
+
+\mbox{\label{namespacego__to__point__ball_a9a02c8ca89a09909111972ec4fd317ca}} 
+\index{go\+\_\+to\+\_\+point\+\_\+ball@{go\+\_\+to\+\_\+point\+\_\+ball}!dist\+\_\+precision\+\_\+@{dist\+\_\+precision\+\_\+}}
+\index{dist\+\_\+precision\+\_\+@{dist\+\_\+precision\+\_\+}!go\+\_\+to\+\_\+point\+\_\+ball@{go\+\_\+to\+\_\+point\+\_\+ball}}
+\subsubsection{dist\+\_\+precision\+\_\+}
+{\footnotesize\ttfamily float go\+\_\+to\+\_\+point\+\_\+ball.\+dist\+\_\+precision\+\_\+ = 0.\+1}
+
+\mbox{\label{namespacego__to__point__ball_aac67ecb6c41141092b1ccaba4b537afc}} 
+\index{go\+\_\+to\+\_\+point\+\_\+ball@{go\+\_\+to\+\_\+point\+\_\+ball}!kp\+\_\+a@{kp\+\_\+a}}
+\index{kp\+\_\+a@{kp\+\_\+a}!go\+\_\+to\+\_\+point\+\_\+ball@{go\+\_\+to\+\_\+point\+\_\+ball}}
+\subsubsection{kp\+\_\+a}
+{\footnotesize\ttfamily float go\+\_\+to\+\_\+point\+\_\+ball.\+kp\+\_\+a = 3.\+0}
+
+\mbox{\label{namespacego__to__point__ball_aeb49969b88b7ca77d9abdeae42cb1964}} 
+\index{go\+\_\+to\+\_\+point\+\_\+ball@{go\+\_\+to\+\_\+point\+\_\+ball}!kp\+\_\+d@{kp\+\_\+d}}
+\index{kp\+\_\+d@{kp\+\_\+d}!go\+\_\+to\+\_\+point\+\_\+ball@{go\+\_\+to\+\_\+point\+\_\+ball}}
+\subsubsection{kp\+\_\+d}
+{\footnotesize\ttfamily float go\+\_\+to\+\_\+point\+\_\+ball.\+kp\+\_\+d = 0.\+5}
+
+\mbox{\label{namespacego__to__point__ball_ae6440cb2a8ea6e8e7d2327cb4cd12dd3}} 
+\index{go\+\_\+to\+\_\+point\+\_\+ball@{go\+\_\+to\+\_\+point\+\_\+ball}!lb\+\_\+a@{lb\+\_\+a}}
+\index{lb\+\_\+a@{lb\+\_\+a}!go\+\_\+to\+\_\+point\+\_\+ball@{go\+\_\+to\+\_\+point\+\_\+ball}}
+\subsubsection{lb\+\_\+a}
+{\footnotesize\ttfamily float go\+\_\+to\+\_\+point\+\_\+ball.\+lb\+\_\+a = -\/0.\+5}
+
+\mbox{\label{namespacego__to__point__ball_a03f1d8b257a2ae3d173a18c3fc2f8602}} 
+\index{go\+\_\+to\+\_\+point\+\_\+ball@{go\+\_\+to\+\_\+point\+\_\+ball}!pose\+\_\+@{pose\+\_\+}}
+\index{pose\+\_\+@{pose\+\_\+}!go\+\_\+to\+\_\+point\+\_\+ball@{go\+\_\+to\+\_\+point\+\_\+ball}}
+\subsubsection{pose\+\_\+}
+{\footnotesize\ttfamily go\+\_\+to\+\_\+point\+\_\+ball.\+pose\+\_\+ = Pose()}
+
+\mbox{\label{namespacego__to__point__ball_aa399e57145dd0af7eefcd5fab4174fe9}} 
+\index{go\+\_\+to\+\_\+point\+\_\+ball@{go\+\_\+to\+\_\+point\+\_\+ball}!position\+\_\+@{position\+\_\+}}
+\index{position\+\_\+@{position\+\_\+}!go\+\_\+to\+\_\+point\+\_\+ball@{go\+\_\+to\+\_\+point\+\_\+ball}}
+\subsubsection{position\+\_\+}
+{\footnotesize\ttfamily go\+\_\+to\+\_\+point\+\_\+ball.\+position\+\_\+ = Point()}
+
+\mbox{\label{namespacego__to__point__ball_a00b95c7141b558cd4466ca89d7c81640}} 
+\index{go\+\_\+to\+\_\+point\+\_\+ball@{go\+\_\+to\+\_\+point\+\_\+ball}!pub@{pub}}
+\index{pub@{pub}!go\+\_\+to\+\_\+point\+\_\+ball@{go\+\_\+to\+\_\+point\+\_\+ball}}
+\subsubsection{pub}
+{\footnotesize\ttfamily go\+\_\+to\+\_\+point\+\_\+ball.\+pub = None}
+
+\mbox{\label{namespacego__to__point__ball_ae3016b9645d9bd2b863a34a30115a6af}} 
+\index{go\+\_\+to\+\_\+point\+\_\+ball@{go\+\_\+to\+\_\+point\+\_\+ball}!pubz@{pubz}}
+\index{pubz@{pubz}!go\+\_\+to\+\_\+point\+\_\+ball@{go\+\_\+to\+\_\+point\+\_\+ball}}
+\subsubsection{pubz}
+{\footnotesize\ttfamily go\+\_\+to\+\_\+point\+\_\+ball.\+pubz = None}
+
+\mbox{\label{namespacego__to__point__ball_a0028df70b94b4041119cceba5e5aa79d}} 
+\index{go\+\_\+to\+\_\+point\+\_\+ball@{go\+\_\+to\+\_\+point\+\_\+ball}!state\+\_\+@{state\+\_\+}}
+\index{state\+\_\+@{state\+\_\+}!go\+\_\+to\+\_\+point\+\_\+ball@{go\+\_\+to\+\_\+point\+\_\+ball}}
+\subsubsection{state\+\_\+}
+{\footnotesize\ttfamily int go\+\_\+to\+\_\+point\+\_\+ball.\+state\+\_\+ = 0}
+
+\mbox{\label{namespacego__to__point__ball_aa5173a26f3502ea035d7c563bbf1fb05}} 
+\index{go\+\_\+to\+\_\+point\+\_\+ball@{go\+\_\+to\+\_\+point\+\_\+ball}!ub\+\_\+a@{ub\+\_\+a}}
+\index{ub\+\_\+a@{ub\+\_\+a}!go\+\_\+to\+\_\+point\+\_\+ball@{go\+\_\+to\+\_\+point\+\_\+ball}}
+\subsubsection{ub\+\_\+a}
+{\footnotesize\ttfamily float go\+\_\+to\+\_\+point\+\_\+ball.\+ub\+\_\+a = 0.\+6}
+
+\mbox{\label{namespacego__to__point__ball_a1dabe6f24f898fa6f5303959917de757}} 
+\index{go\+\_\+to\+\_\+point\+\_\+ball@{go\+\_\+to\+\_\+point\+\_\+ball}!ub\+\_\+d@{ub\+\_\+d}}
+\index{ub\+\_\+d@{ub\+\_\+d}!go\+\_\+to\+\_\+point\+\_\+ball@{go\+\_\+to\+\_\+point\+\_\+ball}}
+\subsubsection{ub\+\_\+d}
+{\footnotesize\ttfamily float go\+\_\+to\+\_\+point\+\_\+ball.\+ub\+\_\+d = 2.\+0}
+
+\mbox{\label{namespacego__to__point__ball_a74d8ca28c507d35baf1ea8e8f9595a78}} 
+\index{go\+\_\+to\+\_\+point\+\_\+ball@{go\+\_\+to\+\_\+point\+\_\+ball}!yaw\+\_\+@{yaw\+\_\+}}
+\index{yaw\+\_\+@{yaw\+\_\+}!go\+\_\+to\+\_\+point\+\_\+ball@{go\+\_\+to\+\_\+point\+\_\+ball}}
+\subsubsection{yaw\+\_\+}
+{\footnotesize\ttfamily int go\+\_\+to\+\_\+point\+\_\+ball.\+yaw\+\_\+ = 0}
+
+\mbox{\label{namespacego__to__point__ball_acc228d72c1ee47a43061e3563ac20d5c}} 
+\index{go\+\_\+to\+\_\+point\+\_\+ball@{go\+\_\+to\+\_\+point\+\_\+ball}!yaw\+\_\+precision\+\_\+@{yaw\+\_\+precision\+\_\+}}
+\index{yaw\+\_\+precision\+\_\+@{yaw\+\_\+precision\+\_\+}!go\+\_\+to\+\_\+point\+\_\+ball@{go\+\_\+to\+\_\+point\+\_\+ball}}
+\subsubsection{yaw\+\_\+precision\+\_\+}
+{\footnotesize\ttfamily int go\+\_\+to\+\_\+point\+\_\+ball.\+yaw\+\_\+precision\+\_\+ = math.\+pi / 9}
+
+\mbox{\label{namespacego__to__point__ball_a1985c69cf8534ba0bd2c6080f788a992}} 
+\index{go\+\_\+to\+\_\+point\+\_\+ball@{go\+\_\+to\+\_\+point\+\_\+ball}!yaw\+\_\+precision\+\_\+2\+\_\+@{yaw\+\_\+precision\+\_\+2\+\_\+}}
+\index{yaw\+\_\+precision\+\_\+2\+\_\+@{yaw\+\_\+precision\+\_\+2\+\_\+}!go\+\_\+to\+\_\+point\+\_\+ball@{go\+\_\+to\+\_\+point\+\_\+ball}}
+\subsubsection{yaw\+\_\+precision\+\_\+2\+\_\+}
+{\footnotesize\ttfamily int go\+\_\+to\+\_\+point\+\_\+ball.\+yaw\+\_\+precision\+\_\+2\+\_\+ = math.\+pi / 90}
+
+\mbox{\label{namespacego__to__point__ball_a176944c73499ce72fa754c7e1a6d138d}} 
+\index{go\+\_\+to\+\_\+point\+\_\+ball@{go\+\_\+to\+\_\+point\+\_\+ball}!z\+\_\+back@{z\+\_\+back}}
+\index{z\+\_\+back@{z\+\_\+back}!go\+\_\+to\+\_\+point\+\_\+ball@{go\+\_\+to\+\_\+point\+\_\+ball}}
+\subsubsection{z\+\_\+back}
+{\footnotesize\ttfamily float go\+\_\+to\+\_\+point\+\_\+ball.\+z\+\_\+back = 0.\+25}
+

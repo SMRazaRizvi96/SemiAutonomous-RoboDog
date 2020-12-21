@@ -1,0 +1,240 @@
+\section{assignment2.\+Play Class Reference}
+\label{classassignment2_1_1_play}\index{assignment2.\+Play@{assignment2.\+Play}}
+
+
+Inherits State.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \textbf{ \+\_\+\+\_\+init\+\_\+\+\_\+} (self)
+\item 
+def \textbf{ execute} (self, userdata)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ head\+\_\+pub}
+\item 
+\textbf{ Float64}
+\item 
+\textbf{ queue\+\_\+size}
+\item 
+int \textbf{ radius} = 0
+\item 
+int \textbf{ elapsed} = 0
+\item 
+\textbf{ data} = \textbf{ Float64}()
+\item 
+\textbf{ image\+\_\+np} = cv2.\+imdecode(np\+\_\+arr, cv2.\+I\+M\+R\+E\+A\+D\+\_\+\+C\+O\+L\+OR)
+\item 
+tuple \textbf{ green\+Lower} = (50, 50, 20)
+\item 
+tuple \textbf{ green\+Upper} = (70, 255, 255)
+\item 
+\textbf{ blurred} = cv2.\+Gaussian\+Blur(\textbf{ image\+\_\+np}, (11, 11), 0)
+\item 
+\textbf{ hsv} = cv2.\+cvt\+Color(\textbf{ blurred}, cv2.\+C\+O\+L\+O\+R\+\_\+\+B\+G\+R2\+H\+SV)
+\item 
+\textbf{ mask} = cv2.\+in\+Range(\textbf{ hsv}, \textbf{ green\+Lower}, \textbf{ green\+Upper})
+\item 
+\textbf{ cnts}
+\item 
+\textbf{ center} = None
+\item 
+\textbf{ c} = max(\textbf{ cnts}, key=cv2.\+contour\+Area)
+\item 
+\textbf{ radius}
+\item 
+\textbf{ M} = cv2.\+moments(\textbf{ c})
+\item 
+tuple \textbf{ center} = (int(\textbf{ M}[\char`\"{}m10\char`\"{}] / M[\char`\"{}m00\char`\"{}]), int(\textbf{ M}[\char`\"{}m01\char`\"{}] / M[\char`\"{}m00\char`\"{}]))
+\item 
+\textbf{ z}
+\item 
+\textbf{ x}
+\item 
+\textbf{ vel} = Twist()
+\item 
+\textbf{ timer} = time.\+clock()
+\item 
+\textbf{ elapsed} = time.\+clock() -\/ \textbf{ timer}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}In PLAY state the robot has to use its camera to track and follow the green ball.
+In this state, the image received from the Robot's camera is processed using Open CV to detect any contours of the green ball.
+If any contour is found, the Robot is directed to go near the ball, otherwise the Robot is directed to rotate, and find the ball.
+Once the Robot has reached near the ball, the robot rotates its head right, and left upto 45 degrees and then again looks for the ball.
+The robot searches for the ball for 10 seconds. This functionality is implemented using a timer.
+\end{DoxyVerb}
+ 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{classassignment2_1_1_play_a12f719c9d73f152f74d0176b31c5602e}} 
+\index{assignment2\+::\+Play@{assignment2\+::\+Play}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!assignment2\+::\+Play@{assignment2\+::\+Play}}
+\subsubsection{\+\_\+\+\_\+init\+\_\+\+\_\+()}
+{\footnotesize\ttfamily def assignment2.\+Play.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\label{classassignment2_1_1_play_acb448118e63c6175d8374b3fa5f996fa}} 
+\index{assignment2\+::\+Play@{assignment2\+::\+Play}!execute@{execute}}
+\index{execute@{execute}!assignment2\+::\+Play@{assignment2\+::\+Play}}
+\subsubsection{execute()}
+{\footnotesize\ttfamily def assignment2.\+Play.\+execute (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{userdata }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\label{classassignment2_1_1_play_a5b384ada843955b54d3b2d3fcdb7c74b}} 
+\index{assignment2\+::\+Play@{assignment2\+::\+Play}!blurred@{blurred}}
+\index{blurred@{blurred}!assignment2\+::\+Play@{assignment2\+::\+Play}}
+\subsubsection{blurred}
+{\footnotesize\ttfamily assignment2.\+Play.\+blurred = cv2.\+Gaussian\+Blur(\textbf{ image\+\_\+np}, (11, 11), 0)\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\label{classassignment2_1_1_play_ac8f4bf62f790f27a244f0ca99ec56429}} 
+\index{assignment2\+::\+Play@{assignment2\+::\+Play}!c@{c}}
+\index{c@{c}!assignment2\+::\+Play@{assignment2\+::\+Play}}
+\subsubsection{c}
+{\footnotesize\ttfamily assignment2.\+Play.\+c = max(\textbf{ cnts}, key=cv2.\+contour\+Area)\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\label{classassignment2_1_1_play_a39f48ccb7a14fff7faf92905b93e568f}} 
+\index{assignment2\+::\+Play@{assignment2\+::\+Play}!center@{center}}
+\index{center@{center}!assignment2\+::\+Play@{assignment2\+::\+Play}}
+\subsubsection{center\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily assignment2.\+Play.\+center = None\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\label{classassignment2_1_1_play_add9ac840a66c637dd9006f28f1e1ecdd}} 
+\index{assignment2\+::\+Play@{assignment2\+::\+Play}!center@{center}}
+\index{center@{center}!assignment2\+::\+Play@{assignment2\+::\+Play}}
+\subsubsection{center\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily tuple assignment2.\+Play.\+center = (int(\textbf{ M}[\char`\"{}m10\char`\"{}] / M[\char`\"{}m00\char`\"{}]), int(\textbf{ M}[\char`\"{}m01\char`\"{}] / M[\char`\"{}m00\char`\"{}]))\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\label{classassignment2_1_1_play_ad553ca32dfa683eccfb2b17d84a245dc}} 
+\index{assignment2\+::\+Play@{assignment2\+::\+Play}!cnts@{cnts}}
+\index{cnts@{cnts}!assignment2\+::\+Play@{assignment2\+::\+Play}}
+\subsubsection{cnts}
+{\footnotesize\ttfamily assignment2.\+Play.\+cnts\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=  cv2.findContours(mask.copy(), cv2.RETR\_EXTERNAL,
+                        cv2.CHAIN\_APPROX\_SIMPLE)
+\end{DoxyCode}
+\mbox{\label{classassignment2_1_1_play_a50d8659a1cc8794cbafd6da73f1a58dc}} 
+\index{assignment2\+::\+Play@{assignment2\+::\+Play}!data@{data}}
+\index{data@{data}!assignment2\+::\+Play@{assignment2\+::\+Play}}
+\subsubsection{data}
+{\footnotesize\ttfamily assignment2.\+Play.\+data = \textbf{ Float64}()\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\label{classassignment2_1_1_play_a9c6969a879eb4e4020cea4b9eaaeead3}} 
+\index{assignment2\+::\+Play@{assignment2\+::\+Play}!elapsed@{elapsed}}
+\index{elapsed@{elapsed}!assignment2\+::\+Play@{assignment2\+::\+Play}}
+\subsubsection{elapsed\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int assignment2.\+Play.\+elapsed = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\label{classassignment2_1_1_play_aa02782ff20ca17a69c9636e68cf916a9}} 
+\index{assignment2\+::\+Play@{assignment2\+::\+Play}!elapsed@{elapsed}}
+\index{elapsed@{elapsed}!assignment2\+::\+Play@{assignment2\+::\+Play}}
+\subsubsection{elapsed\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily assignment2.\+Play.\+elapsed = time.\+clock() -\/ \textbf{ timer}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\label{classassignment2_1_1_play_ac368030ea7c070bd5a2f036eb3a4984f}} 
+\index{assignment2\+::\+Play@{assignment2\+::\+Play}!Float64@{Float64}}
+\index{Float64@{Float64}!assignment2\+::\+Play@{assignment2\+::\+Play}}
+\subsubsection{Float64}
+{\footnotesize\ttfamily assignment2.\+Play.\+Float64\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\label{classassignment2_1_1_play_af4fd731532d7357b9a717c34dcf73379}} 
+\index{assignment2\+::\+Play@{assignment2\+::\+Play}!green\+Lower@{green\+Lower}}
+\index{green\+Lower@{green\+Lower}!assignment2\+::\+Play@{assignment2\+::\+Play}}
+\subsubsection{green\+Lower}
+{\footnotesize\ttfamily tuple assignment2.\+Play.\+green\+Lower = (50, 50, 20)\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\label{classassignment2_1_1_play_a6884ee60521c2f0616b15e890e5590a5}} 
+\index{assignment2\+::\+Play@{assignment2\+::\+Play}!green\+Upper@{green\+Upper}}
+\index{green\+Upper@{green\+Upper}!assignment2\+::\+Play@{assignment2\+::\+Play}}
+\subsubsection{green\+Upper}
+{\footnotesize\ttfamily tuple assignment2.\+Play.\+green\+Upper = (70, 255, 255)\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\label{classassignment2_1_1_play_a822ced408ba2bed1dbfbd5d0d5c7b969}} 
+\index{assignment2\+::\+Play@{assignment2\+::\+Play}!head\+\_\+pub@{head\+\_\+pub}}
+\index{head\+\_\+pub@{head\+\_\+pub}!assignment2\+::\+Play@{assignment2\+::\+Play}}
+\subsubsection{head\+\_\+pub}
+{\footnotesize\ttfamily assignment2.\+Play.\+head\+\_\+pub\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\label{classassignment2_1_1_play_aae97fbed1d9a8ebd1175a8ca5d7483ff}} 
+\index{assignment2\+::\+Play@{assignment2\+::\+Play}!hsv@{hsv}}
+\index{hsv@{hsv}!assignment2\+::\+Play@{assignment2\+::\+Play}}
+\subsubsection{hsv}
+{\footnotesize\ttfamily assignment2.\+Play.\+hsv = cv2.\+cvt\+Color(\textbf{ blurred}, cv2.\+C\+O\+L\+O\+R\+\_\+\+B\+G\+R2\+H\+SV)\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\label{classassignment2_1_1_play_ade48830f5885920f5a50d14a8b5110e3}} 
+\index{assignment2\+::\+Play@{assignment2\+::\+Play}!image\+\_\+np@{image\+\_\+np}}
+\index{image\+\_\+np@{image\+\_\+np}!assignment2\+::\+Play@{assignment2\+::\+Play}}
+\subsubsection{image\+\_\+np}
+{\footnotesize\ttfamily assignment2.\+Play.\+image\+\_\+np = cv2.\+imdecode(np\+\_\+arr, cv2.\+I\+M\+R\+E\+A\+D\+\_\+\+C\+O\+L\+OR)\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\label{classassignment2_1_1_play_ad9995c940906557d8fae9312efe8f72b}} 
+\index{assignment2\+::\+Play@{assignment2\+::\+Play}!M@{M}}
+\index{M@{M}!assignment2\+::\+Play@{assignment2\+::\+Play}}
+\subsubsection{M}
+{\footnotesize\ttfamily assignment2.\+Play.\+M = cv2.\+moments(\textbf{ c})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\label{classassignment2_1_1_play_adeaeb15e2e3152eb4b99ecfbaf46bf3b}} 
+\index{assignment2\+::\+Play@{assignment2\+::\+Play}!mask@{mask}}
+\index{mask@{mask}!assignment2\+::\+Play@{assignment2\+::\+Play}}
+\subsubsection{mask}
+{\footnotesize\ttfamily assignment2.\+Play.\+mask = cv2.\+in\+Range(\textbf{ hsv}, \textbf{ green\+Lower}, \textbf{ green\+Upper})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\label{classassignment2_1_1_play_a3a28d179da33426055252c8816ab4cd4}} 
+\index{assignment2\+::\+Play@{assignment2\+::\+Play}!queue\+\_\+size@{queue\+\_\+size}}
+\index{queue\+\_\+size@{queue\+\_\+size}!assignment2\+::\+Play@{assignment2\+::\+Play}}
+\subsubsection{queue\+\_\+size}
+{\footnotesize\ttfamily assignment2.\+Play.\+queue\+\_\+size\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\label{classassignment2_1_1_play_a44df38d5e0f2c57823a7bd1a20dd57ca}} 
+\index{assignment2\+::\+Play@{assignment2\+::\+Play}!radius@{radius}}
+\index{radius@{radius}!assignment2\+::\+Play@{assignment2\+::\+Play}}
+\subsubsection{radius\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int assignment2.\+Play.\+radius = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\label{classassignment2_1_1_play_ac2543b2808e6bc68bff50240f68189c5}} 
+\index{assignment2\+::\+Play@{assignment2\+::\+Play}!radius@{radius}}
+\index{radius@{radius}!assignment2\+::\+Play@{assignment2\+::\+Play}}
+\subsubsection{radius\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily assignment2.\+Play.\+radius\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\label{classassignment2_1_1_play_ae6c08265f98d8cfe60df46840751f56f}} 
+\index{assignment2\+::\+Play@{assignment2\+::\+Play}!timer@{timer}}
+\index{timer@{timer}!assignment2\+::\+Play@{assignment2\+::\+Play}}
+\subsubsection{timer}
+{\footnotesize\ttfamily assignment2.\+Play.\+timer = time.\+clock()\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\label{classassignment2_1_1_play_abf1871edafee15b17ac33700d60630a0}} 
+\index{assignment2\+::\+Play@{assignment2\+::\+Play}!vel@{vel}}
+\index{vel@{vel}!assignment2\+::\+Play@{assignment2\+::\+Play}}
+\subsubsection{vel}
+{\footnotesize\ttfamily assignment2.\+Play.\+vel = Twist()\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\label{classassignment2_1_1_play_a25205edc55041cb8bc180d3f0902c833}} 
+\index{assignment2\+::\+Play@{assignment2\+::\+Play}!x@{x}}
+\index{x@{x}!assignment2\+::\+Play@{assignment2\+::\+Play}}
+\subsubsection{x}
+{\footnotesize\ttfamily assignment2.\+Play.\+x\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\label{classassignment2_1_1_play_a57ad0312f0832121b0579dc0d681cc24}} 
+\index{assignment2\+::\+Play@{assignment2\+::\+Play}!z@{z}}
+\index{z@{z}!assignment2\+::\+Play@{assignment2\+::\+Play}}
+\subsubsection{z}
+{\footnotesize\ttfamily assignment2.\+Play.\+z\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+scripts/\textbf{ assignment2.\+py}\end{DoxyCompactItemize}
