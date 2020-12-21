@@ -99,8 +99,8 @@ This is the 'Assignment 2 for the course 'Experimental Robotics'.
         
 #####   detectBall():
         This function is the callback of the Camera Image topic "robot/camera1/image_raw/compressed".
-	      This function uses Open CV to process the image received, and detects the contours of the Green ball in that image.
-	      If any contour is found, it sets the Parameter "detectBallFlag" to 1, otherwise sets it to 0.
+	This function uses Open CV to process the image received, and detects the contours of the Green ball in that image.
+	If any contour is found, it sets the Parameter "detectBallFlag" to 1, otherwise sets it to 0.
 
 #####   go_to_goal():
         This function generates the velocity commands to move the robot to the coordinate received in the parameter.
