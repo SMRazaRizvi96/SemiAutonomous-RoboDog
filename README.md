@@ -54,19 +54,19 @@ It is a normal colorless human being sitting on a chair.
 
 #####   Subscribed to:
 
-        "/robot/odom" : Topic to get the Robot's odometry data
-        "robot/camera1/image_raw/compressed" : To get the Compressed Camera Image
+    '/robot/odom' : Topic to get the Robot's odometry data
+    'robot/camera1/image_raw/compressed' : To get the Compressed Camera Image
           
 #####   Publishing to:
 
-        "/robot/cmd_vel : To publish velocity command to the Robot
-        "/robot/joint1_position_controller/command" : To publish commands to rotate the head
+    '/robot/cmd_vel' : To publish velocity command to the Robot
+    '/robot/joint1_position_controller/command' : To publish commands to rotate the head
 	
 **************************
 
 #### ROS Action Servers Used:
 
-	'/reaching_goal' : This is defined in the go_to_point_ball.py.
+    '/reaching_goal' : This is defined in the go_to_point_ball.py.
 	
 It subscribes to the topic "reaching_goal/goal", and the robot's odometry topic '/ball/odom' and generates velocity commands for the ball on the topic '/ball/cmd_vel' to move the ball to reach that position coordinate. It also sets the ball link by publishig on the topic '/gazebo/set_link_state'.
           
@@ -135,7 +135,6 @@ This function also keeps checking the parameter "detectBallFlag", and if this pa
 	
 1. Currently the robot could only move around within a limited space, and only in 2D.
 2. The Robot can only detect and follow a green ball within a certain range of HSV.
-3. 
 
 **************************
 
