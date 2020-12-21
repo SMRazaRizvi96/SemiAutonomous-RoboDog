@@ -13,18 +13,22 @@ This is the 'Assignment 2 for the course 'Experimental Robotics'.
     Give running permissions to it with $ chmod +x assignment2.py
 
     Run the launch file $ roslaunch exp_assignment2 gazebo_world.launch
+    
+    Publish position coordinates for the Ball on the topic "reaching_goal/goal"
+    
+**************************    
 
 #### Files List:
 
     assignment2.py: This is the State Machine
     go_to_point_ball.py: This is the action server responsible for moving the ball to the coordinate received on the topic "reaching_goal/goal"
 
-#### ROS Parameters Used:
+#### ROS Parameters Used in the State Machine:
 
     'state': This parameter tells the current state of the Robot
     'detectBallFlag': This parameter is a flag that is 1 if the ball is detected and 0 otherwise
     
-#### ROS Topics Used:
+#### ROS Topics Used in the State Machine:
 
 #####   Subscribed to:
 
@@ -35,11 +39,19 @@ This is the 'Assignment 2 for the course 'Experimental Robotics'.
 
         "/robot/cmd_vel : To publish velocity command to the Robot
         "/robot/joint1_position_controller/command" : To publish commands to rotate the head
+	
+**************************
+
+#### ROS Action Servers Used:
+
+	'/reaching_goal' : This is defined in the go_to_point_ball.py.
+	
+	It subscribes to the topic "reaching_goal/goal", and the robot's odometry topic '/ball/odom' and generates velocity commands for the ball on the topic '/ball/cmd_vel' to move the ball to reach that position coordinate. It also sets the ball link by publishig on the topic '/gazebo/set_link_state'.
           
     
 **************************
 
-#### Implementation Details:
+#### Implementation Details of the State Machine:
 
     In this Assignment, we have developed a Finite State Machine for a Robot dog that has three states:
 
@@ -79,7 +91,7 @@ This is the 'Assignment 2 for the course 'Experimental Robotics'.
 
 **************************
 
-#### Functions Used:
+#### Functions Used in the State Machine:
 
 #####   newOdom():
         This function is a callback for the robot's odometry topic "/robot/odom".
