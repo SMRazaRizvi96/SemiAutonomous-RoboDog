@@ -145,7 +145,7 @@ Laiba Zahid (S4853477): S4853477@STUDENTI.UNIGE.IT
 
 Syed Muhammad Raza Rizvi (S4853521): S4853521@STUDENTI.UNIGE.IT
 
-The algorithm was drafted finalized after a discussion between the authors and was then implemented together.
+The algorithm was drafted and finalized after a discussion between the authors and was then implemented together.
 
 **************************
 
