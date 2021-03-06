@@ -1,4 +1,4 @@
-# ExpRobotics-RobotDog
+# SemiAutonomous-RobotDog
 
 This is a finite state machine for a Robot Dog
 
