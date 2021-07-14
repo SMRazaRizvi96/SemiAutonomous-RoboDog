@@ -144,11 +144,11 @@ This function also keeps checking the parameter "detectBallFlag", and if this pa
 
 **************************
 
-#### Authors:
+#### Developers:
 
-Laiba Zahid (S4853477): S4853477@STUDENTI.UNIGE.IT
+[Laiba Zahid](https://github.com/laibazahid26)
 
-Syed Muhammad Raza Rizvi (S4853521): S4853521@STUDENTI.UNIGE.IT
+[Syed Muhammad Raza Rizvi](https://github.com/SMRazaRizvi96)
 
 The algorithm was drafted and finalized after a discussion between the authors and was then implemented together.
 
